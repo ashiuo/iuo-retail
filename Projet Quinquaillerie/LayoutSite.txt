@@ -1,0 +1,267 @@
+L'interface du site se présente de façon très légère afin de faciliter les accès en période de grandes activités. Les couleurs sont sobres mais bien définies. Le blanc est couplé avec le bleu sombre, le mauve ou le noir selon le niveau d'accès de la personne connectée. 
+
+Adresse du site : www.qinuoht.com 
+
+(Le nom de domaine qiuo.ht n'étant malheureusement pas disponible) 
+
+Le site contient plusieurs pages reliés à de nombreux modules. Codé en html, css, php et un brin de JavaScript, de nodeJS et light bootstrap, il est relié à une base de donnée simple afin de faciliter des transactions fluides.
+
+Voici en premier lieu un plan détaillé 
+
+image 1a
+
+Index.php >> Login.php/Register.php >>
+Admin.php / Direct.php / Manager.php / Emp.php / Client.php
+
+AboutUs.php
+
+ContactUs.php
+
+Copyright.php
+
+Config.php (link)
+
+Nou allons commencer avec les configurations de bases.
+
+
+Notre application web étant connectée à une base de donnée, nous devons lui signifier le nom de cette base, où elle se situe et comment s'y connecter.
+Ces informations sont consignées dans le fichier "config.php" qui servira de fichier de contrôle sur divers actions possible ou non au niveau de l'interface web. Nous verrons plus loin comment se protéger de potentiels attaques sur nos différents fichiers. 
+
+Lorsque qu'un utilisateur entre l'adresse du site dans son navigateur, il accède à la page "index.php"
+
+
+LA PAGE INDEX.PHP
+
+La page index.php est le portail d'entrée de notre site web. Elle se présente simplement. Quelques images et description de nos excellents produits, un petit mot de la part de nos employés, un espace "review" où les clients enregistrés peuvent laisser un commentaire avec une note de 1 à 5. 
+
+Au haut de la page, nous proposons une description brève de notre compagnie avec un défilement de nos meilleures slogans et juste en-dessous un bouton login, bien visible pour nos clients.
+
+Un menu déroulant se situe en haut à gauche également qui offre les options 
+
+REGISTER
+LOGIN
+ABOUT US
+CONTACT US
+COPYRIGHT
+
+Les animations restent simples mais plaisant car nous restons concentrés plus sur les fonctionnalités que sur l'esthétique pour l'instant. On verra un peu plus tard.
+
+Le bouton REGISTER renvoie vers un formulaire d'inscription qui permet d'enregistrer un nouveau client dans la base, à condition qu'il n'y existe pas encore (email ou numéro)
+
+Le bouton LOGIN permet à un utilisateur qui a dejà un compte de se connecter.
+
+Le bouton ABOUT US renvoie vers une page qui présente la compagnie ainsi que sa politique, on y présente également nos conditions d'utilisations, un FAQ et ( Prochainement un service à la clientèle email, LIVE chat ou appel direct ) 
+
+Le bouton CONTACT US renvoie vers la page FAQ. On y retrouve l'option envoyer un email pour doléance ou suggestion, si un problème unrgent survient le client peut contacter la clientèle directement via une requête LIVE CHAT OU APPEL DIRECT également.
+
+Le COPYRIGHT est un document qui décrit les droits de la compagnie sur tout le contenu du site UNLESS SPECIFIED NOT AUTHORED BY US. Mettant en garde toute personne susceptible de copier ou de se servir des dits contenus sans authorisation préalable. SAID PERSON se voit dans l'obligation de subir les conséquences de tels actes prohibé par le document, et s'il persite des actions légales beaucoup plus sévères peuvent s'ensuivre. 
+
+
+
+
+
+
+LA PAGE LOGIN.PHP
+
+La page login invite l'utilisateur à entrer son PSEUDO et son MOT DE PASSE afin de se connecter.
+
+PROCEDURE POUR RECUPERER UN MOT DE PASSE
+
+Si le client existe dans le système et 
+
+1.  a oublié son MOT DE PASSE
+
+2. a saisi, soit un mauvais mot de passe soit un mauvais pseudo, le système lui signifie de réessayer. Après 3 tentatives infructueuses, une page s'ouvre et l'utilisateur doit entrer l'email avec lequel il s'est inscrit. Après verification que l'email existe bel et bien dans la base de donnée, un mail est envoyé à l'utilisateur avec un lien pour changer son mot de passe. Il doit entrer un nouveau MOT DE PASSE puis le CONFIRMER. 
+
+Si les deux FIELDS ne sont pas les mêmes, une erreur est signalée et la procédure de saisi recommence. 
+
+Si les deux FIELDS sont les mêmes, le NOUVEAU MOT DE PASSE est enregistré dans la base et le client est redirigé vers la page LOGIN.
+
+
+
+CONNEXION
+
+Le système utilise le fichier config.php afin de se connecter à la base pour vérifier le pseudo et le mot de passe fourni par l'utilisateur. 
+
+Le systeme compare pseudo avec PSEUDO dans la table USER, puis mot de passe avec PASSWORD dans la table USER. 
+On extrait également la valeur de NIVEAU D'ACCES dans la table USER. Cette valeur se situe toujours entre 1 et 5.
+
+SI PSEUDO et PASSWORD de la table USER concordent avec PSEUDO et MOT DE PASSE, le client est redirigé vers la page qui correspond à son niveau d'accès.
+
+NIVEAU D'ACCES
+Le niveau d'accès est un chiffre (INT) qui est assigné dès la création de l'utilisateur soit lors de la création de compte personnel, soit par le biais de l'administrateur. L'admin possède une plus grande liberté d'action lors de la création de compte tandis qu'un client va toujours recevoir un niveau d'accès "1" lors de son inscription. 
+ 
+image 2a
+
+Les différents niveaux d'accès
+
+Admin.php >> 5
+Direct.php >> 4
+Manager.php >> 3
+Emp.php >> 2 
+Client.php >> 1
+
++++Niveau d'accès 1 ou NA1+++
+
+Après une connexion réussie, l'utilisateur de NA1 est redirigé vers la page client.php
+
+Un NA1 peut effectuer les actions suivantes
+
+COMMANDE
+
+Regarder des produits (Browsing)
+Ajouter ou Supprimer des produits dans le Kart (AddProduct/RemoveProduct)
+Placer une commande(BuyProduct)
+Voir commandes effectués (Historic)
+Valider achat avec Carte Bancaire Visa/MasterCard ou MonCash)
+
+
+SETTINGS
+
+Changer pseudo
+Changer mot de passe
+Changer email
+
+LOGOUT
+
+Deconnexion
+
+
+
+
++++Niveau d'accès 2 ou NA2+++
+
+Après une connexion réussie, l'utilisateur de NA2 est redirigé vers la page emp.php
+
+Un NA2 peut effectuer les actions suivantes
+
+COMMANDE
+
+Placer commande (Un client achète directement à la caisse)
+Ajouter ou Supprimer des produits dans le Kart (AddProduct/RemoveProduct)
+Placer une commande(BuyProduct) pour le client.
+Recevoir paiement Cash (Le montant est entré manuellement pour l'instant)
+Voir commandes effectués (HistoricEmp)
+
+SUPPORT
+Contacter le manager
+
+
+SETTINGS
+Changer mot de passe
+
+LOGOUT
+Deconnexion
+
+
+
+
++++Niveau d'accès 3 ou NA3+++
+
+Après une connexion réussie, l'utilisateur de NA3 est redirigé vers la page comptabilite.php
+
+Un NA3 peut effectuer les actions suivantes
+
+COMMANDE
+
+Procéder à un remboursement ( Refund)
+
+Ajouter ou Supprimer des produits dans le système (AddSysProduct/RemoveSysProduct)
+
+Ajouter ou Supprimer des employer dans le système (AddEmp/RemoveEmp)
+
+Modifier un employé (Salaire, Poste, Promotion, Bonus)
+
+Soumettre Rapport de vente
+
+Vérifier les transactions systèmes (Achats et Ventes)
+
+Confirmer Achat Produits (Renflouer le stock)
+
+
+Voir commandes effectués (HistoricEmpGlobal)
+
+Verifier heures de travails
+
+
+
+
+SUPPORT
+Contacter Admin
+Contacter le Directeur
+
+
+SETTINGS
+Changer mot de passe
+Changer droits d'accès
+
+LOGOUT
+Deconnexion
+
+
+
+
+++Niveau d'accès 4 ou N4+++
+
+Après une connexion réussie, l'utilisateur de NA4 est redirigé vers la page Direct.php
+
+Un NA4 peut effectuer les actions suivantes
+
+COMMANDE
+
+Consulter les rapports d'achats et de ventes ( Rapport Journalier, Weekly, Mensuel et Annuel )
+( Selon différents critères et différentes catégories )
+
+Promouvoir ou licencier un employé (Manager inclu)
+
+Etablir ou Modifier des politiques de ventes
+
+Modifier le prix des produits
+
+SETTINGS
+
+Changer mot de passe
+Changer droits d'accès
+Changer politiques de ventes
+Modifier produits
+Modifier statut employer/manager( Salaire, poste bonus, renvoie, promotion )
+
+LOGOUT
+
+Deconnexion
+
+
+
++++Niveau d'accès 5 ou NA5+++
+
+Après une connexion réussie, l'utilisateur de NA5 est redirigé vers la page admin.php
+
+Un NA5 peut effectuer les actions suivantes
+
+COMMANDE
+
+Ajouter/Supprimer/Modifier produits
+
+Ajouter/Supprimer/Modifier utilisateur
+
+Verifier les activité des employés
+
+Vérifier Login et definir politiques de connexions
+
+Bloquer l'accès au site pour maintenance (Notifications deux (2) jours à l'avance )
+
+
+SETTINGS
+
+>>MODIFIER USER
+Changer pseudo (any user)
+Changer mot de passe (any user)
+Changer email (any user)
+
+>>MODIFIER PRODUITS 
+>> POLITIQUES
+>>MAINTENANCE
+
+LOGOUT
+
+Deconnexion

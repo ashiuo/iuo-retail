@@ -1,0 +1,52 @@
+Après une longue quête infructueuse d'établissements à la recherche d'un projet de cette envergure, nous avons opté pour la simulation complète d'une entreprise avec tous les besoins engendrés par celle-ci, nous avons pris en compte les divers aspects de ce modèle et les dispositions qui s'en suivent seront décris plus bas dans ce document.
+
+
+Nous attribuons la difficulté à trouver des entreprises intéressés à notre projet à la situation actuelle du pays. Nous avons essuyé divers refus de la part de potentiels clients dues en grande partie à l'insécurité grimpante qui s'était installé depuis l'année précédente. C'est dans cette optique également que nous avions optés pour le travail à distance, les rencontres ayant lieux uniquement lors de mises à jour majeures ou lorsque des difficultés techniques se présentait, rendant notre présence necessaire.
+
+PRESENTATION DE L'ENTREPRISE QIUO (Quincaillerie IUO)
+
+Quincaillerie IUO
+
+--Effectif--
+Admin
+Le Directeur
+Manager 
+Employés(Chef d'équipe, responsable des tâches, responsable des ventes )
+
+--Section--
+Reception de matériels (La compagnie achète)
+Vente de matériels (La compagnie vend)
+Livraison de matériels (La compagnie effectue la livraison d'une commande)
+
+--Articles--
+Ciments (par sacs)
+Fers ( 3/4, 1/2, 1/5) (par tonnes)
+Clous (par gramme)
+Fils de fer (par mètres)
+Blocs de construction (par centaines)
+Bois (2x4, 4x4, 12x8, 2x8, 4x8) (Par douzaines)
+
+
+--Fiches--
+Fiche de vente
+Fiche de reception
+Accusé de livraison
+
+--Politique--
+La Quincaillerie IUO se veut une compagnie sérieuse et responsable. La satisfaction de la clientèle est notre priorité. Nous offrons un service de qualité à des prix défiant le marché.
+
+Les clients peuvent passer commande sur notre site internet ou directement dans nos locaux. Dans les deux cas, une fiche de vente est générée contenant le nom du client, son code dans le système ( si le client effectue un achat pour la première fois, on lui réclame sa carte ou ses informations personnels selon qu'il utilise le site ou se retrouve présent sur le comptoir afin de l'ajouter au système, cela permet une meilleure classification des fiches de vente ainsi qu'une rapidité d'execution lors des commandes), le code de vente, les articles achetés avec leur code et les prix totaux, la date du jour, le code de la fiche d'achat généré par le système. 
+
+Les codes clients et systèmes sont uniques et générés automatiquement par le système. 
+
+La compagnie reçoit régulièrement des articles afin de renflouer son stock, au delà d'un certain seuil, le système recommande un renflouement par une sorte de rappel. Le responsable en averti le manager qui devra valider la quantité et ainsi que le reste des formalités.
+
+
+Nous utilisons les services de TROIS fournisseurs
+
+1. La Cima (CIMENT MARASSA) qui nous fournit en Blocs et en ciments.
+2. La Ferona (FERRONNERIE NANTIER) qui nous fournit en fer, clous et fils de fer.
+3. La BOIGA (Boiserie Gaillard) qui nous fournit en bois de toute les dimensions.
+
+La Quincaillerie IUO ne vend pas d'autres produits car nous savons que les articles que nous proposons sont les plus demandés sur le marché et sommes fiers d'offrir nos services à des prix compétitifs. 
+

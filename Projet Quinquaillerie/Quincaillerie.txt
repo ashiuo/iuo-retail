@@ -1,0 +1,17 @@
+Ce document a été rédigé par Belizaire Kemy Fed dans le cadre du projet de fin d'étude de l'Institut Universitaire de l'Ouest (IUO) en collaboration avec Jean Louis Guerlens Fabrice et Alexis Redane Lex Junior
+
+Ce projet consiste à faire la Conception et la Réalisation d'une Application Web pour la Gestion des Stocks - Étude de cas.
+
+Planning du projet - Date limite 6 Septembre 2021
+
+Février Mars Avril Mai Juin Juillet Aout Septembre
+
+Février Mars Avril : Recherche intensive, choix des logiciels et des technologies à appliquer au projet
+
+Mai : Etablissement des objectifs principaux, Redaction cahier des charges et plans détaillés du projet (Backbone)
+
+Juin Juillet : Codage des différents modules - Codage du site et de l'application Web - Tests
+
+Aout : Ajout de fonctionnalités clés - révisions des bugs - Publication officiel du projet - tests utilisateurs et recueil de feedbacks - révisions et mises à jours
+
+Septembre : Mises à jour du projet

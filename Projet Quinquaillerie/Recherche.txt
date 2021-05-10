@@ -1,0 +1,47 @@
+Code QR emulation for testing
+
+
+Avantages produits
+
+Voucher and Give Away
+
+
+Documents
+
+
+
+definir cadre theorique et conceptuel
+
+
+Methodologie
+
+Etude des fonctionnalités
+
+Cueillete des informations _ Comprendre le sujet
+
+Situer le projet dans le temps et dans l'espace 
+
+GITHUB
+
+UML ou Merise
+
+
+
+Conception et Réalisation d'une Application Web pour la Gestion des Stocks - Étude de cas.
+
+
+Gestion de stock
+ https://www.petite-entreprise.net/P-1334-136-G1-definition-de-la-gestion-des-stocks.html#:~:text=La%20gestion%20des%20stocks%20consiste,quantit%C3%A9%20n%C3%A9cessaire%20au%20bon%20moment.
+
+
+cadre theorique 
+
+Le cadre théorique est construit dans le but avoué d'expliquer un seul problème précis. Le cadre théorique sert aussi à intégrer ou à rendre crédible une recherche particulière, dans l'ensemble de la communauté scientifique.
+
+Cet argument épistémologique signifie que le cadre théorique peut être constitué d'une ou plusieurs théories en vue d'insérer une étude dans la communauté scientifique. Outre, la nécessité d'intégrer la recherche à la communauté scientifique, le cadre théorique sert principalement à présenter un cadre d'analyse et à généraliser des relations d'hypothèses déjà prouvées dans d'autres contextes pour tenter de les appliquer au problème10(*).
+
+
+
+
+
+
